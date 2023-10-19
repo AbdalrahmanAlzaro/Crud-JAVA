@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build and Run Java",
+            "type": "shell",
+            "command": "javac",
+            "args": ["-d", "bin", "${file}"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Run Java",
+            "type": "shell",
+            "command": "java",
+            "args": ["-cp", "bin", "MavenApplication.java"],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
+        }
+    ]
+}
