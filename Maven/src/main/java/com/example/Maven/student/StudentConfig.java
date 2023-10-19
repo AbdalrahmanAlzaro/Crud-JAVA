@@ -12,24 +12,28 @@ import java.util.List;
 public class StudentConfig {
 
     @Bean
-    CommandLineRunner commandLineRunner (
-            StudentRepositry repositry){
+    CommandLineRunner commandLineRunner(
+            StudentRepositry repositry) {
         return args -> {
             Student mariam = new Student(
-//                    1L,
+                    // 1L,
                     "mariam",
                     "mariam@gmail.com",
                     LocalDate.of(2000, Month.APRIL, 5));
 
             Student abd = new Student(
-//                    1L,
+                    // 1L,
                     "abd",
                     "abd@gmail.com",
                     LocalDate.of(2001, Month.APRIL, 5));
+            Student Essam = new Student(
+                    // 1L,
+                    "essam",
+                    "essam@gmail.com",
+                    LocalDate.of(2001, Month.APRIL, 5));
 
             repositry.saveAll(
-                    List.of(mariam, abd)
-            );
+                    List.of(mariam, abd, Essam));
 
         };
     }
